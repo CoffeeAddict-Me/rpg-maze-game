@@ -1,0 +1,24 @@
+<div class="character-select">
+    <h1>Select Your Character</h1>
+
+    <!-- Gender Selection -->
+    <label for="gender">Select Gender:</label>
+    <button (click)="playerGender = 'Male'; updateGender()">Male</button>
+    <button (click)="playerGender = 'Female'; updateGender()">Female</button>
+
+    <!-- Carousel for Class Selection -->
+    <div class="carousel-container">
+        <div *ngFor="let unit of units" class="carousel-item" (click)="selectClass(unit)">
+            <img [src]="playerGender === 'Male' ? unit.maleImage : unit.femaleImage" alt="{{ unit.name }}">
+            <p>{{ unit.name }}</p>
+        </div>
+    </div>
+
+    <!-- Name Input After Class Selection -->
+    <div *ngIf="selectedClass !== ''">
+        <h2>{{ selectedClass.name }}</h2>
+        <label for="name">Enter Character Name:</label>
+        <input type="text" id="name" [(ngModel)]="playerName" placeholder="Enter your name" />
+        <button (click)="createCharacter()">Create Character</button>
+    </div>
+</div>

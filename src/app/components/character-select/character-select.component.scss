@@ -1,0 +1,33 @@
+.character-select {
+    text-align: center;
+
+    .carousel-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        overflow-x: scroll;
+        padding: 20px 0;
+    }
+
+    .carousel-item {
+        cursor: pointer;
+        text-align: center;
+        width: 150px;
+        flex-shrink: 0;
+
+        img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            margin-top: 10px;
+        }
+    }
+
+    .carousel-container::-webkit-scrollbar {
+        display: none;
+        /* Hide scrollbar */
+    }
+}
