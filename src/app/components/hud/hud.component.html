@@ -1,1 +1,38 @@
-<p>hud works!</p>
+<!-- hud.component.html -->
+<div class="hud-container">
+
+    <!-- Character Info -->
+<div class="player-info">
+    <h2>{{ player?.name }}</h2>
+    <div class="health-bar">
+        <div class="health-fill" [style.width.%]="player?.life ? player?.life * 5 : 0"></div>
+    </div>
+    <div class="stats">
+        <span>DEX: {{ player?.dexterity }}</span>
+        <span>STR: {{ player?.strength }}</span>
+    </div>
+</div>
+
+    <!-- Inventory -->
+    <div class="inventory">
+        <h3>Inventory</h3>
+        <ul>
+            <li *ngFor="let item of inventory">{{ item }}</li>
+        </ul>
+    </div>
+
+    <!-- Log -->
+    <div class="log">
+        <h3>Log</h3>
+        <div class="log-messages">
+            <p *ngFor="let message of log">{{ message }}</p>
+        </div>
+    </div>
+
+    <!-- Dice Panel -->
+    <div class="dice-panel">
+        <h3>Roll Dice</h3>
+        <app-dice (rolled)="onDiceRolled($event)"></app-dice>
+    </div>
+
+</div>

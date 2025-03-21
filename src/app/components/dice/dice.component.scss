@@ -1,0 +1,80 @@
+.dice-wrapper {
+    perspective: 800px;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+.dice {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    border-radius: 10px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+.dice-button {
+    margin-top: 15px;
+}
+.face {
+    position: absolute;
+    width: 101px;
+    height: 101px;
+    background: rgb(33, 30, 25);
+    border: 2px solid #333;
+    border-radius: 10px;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Each side positioned correctly */
+.face-1 {
+    transform: rotateY(0deg) translateZ(50px);
+}
+
+.face-2 {
+    transform: rotateY(90deg) translateZ(50px);
+}
+
+.face-3 {
+    transform: rotateY(180deg) translateZ(50px);
+}
+
+.face-4 {
+    transform: rotateY(-90deg) translateZ(50px);
+}
+
+.face-5 {
+    transform: rotateX(90deg) translateZ(50px);
+}
+
+.face-6 {
+    transform: rotateX(-90deg) translateZ(50px);
+}
+
+/* Animation for dice roll */
+.show-1 {
+    transform: rotateX(0deg) rotateY(0deg);
+}
+
+.show-2 {
+    transform: rotateX(0deg) rotateY(-90deg);
+}
+
+.show-3 {
+    transform: rotateX(0deg) rotateY(-180deg);
+}
+
+.show-4 {
+    transform: rotateX(0deg) rotateY(90deg);
+}
+
+.show-5 {
+    transform: rotateX(-90deg) rotateY(0deg);
+}
+
+.show-6 {
+    transform: rotateX(90deg) rotateY(0deg);
+}

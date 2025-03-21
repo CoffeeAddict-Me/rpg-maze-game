@@ -1,1 +1,12 @@
-<p>dice works!</p>
+<div class="dice-wrapper">
+    <div class="dice" [ngClass]="'show-' + currentRoll">
+        <div class="face face-1"><img src="../../../assets/dice/1.jpg"></div>
+        <div class="face face-2"><img src="../../../assets/dice/2.jpg"></div>
+        <div class="face face-3"><img src="../../../assets/dice/3.jpg"></div>
+        <div class="face face-4"><img src="../../../assets/dice/4.jpg"></div>
+        <div class="face face-5"><img src="../../../assets/dice/5.jpg"></div>
+        <div class="face face-6"><img src="../../../assets/dice/6.jpg"></div>
+    </div>
+</div>
+
+<button (click)="rollDice()" class="dice-button">Roll Dice</button>
