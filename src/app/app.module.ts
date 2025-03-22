@@ -13,6 +13,8 @@ import { WinnerComponent } from './components/winner/winner.component';
 import { YouDiedComponent } from './components/you-died/you-died.component';
 import { LootComponent } from './components/loot/loot.component';
 import { YourBagComponent } from './components/your-bag/your-bag.component';
+import { MainComponent } from './components/main/main.component';
+import { IntroComponent } from './components/intro/intro.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { YourBagComponent } from './components/your-bag/your-bag.component';
     YouDiedComponent,
     LootComponent,
     YourBagComponent,
+    MainComponent,
+    IntroComponent,
   ],
   imports: [
     BrowserModule,

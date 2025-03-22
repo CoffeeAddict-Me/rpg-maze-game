@@ -71,7 +71,7 @@ export class CharacterSelectComponent {
       };
 
       this.gameService.setPlayer(playerUnit);
-      this.router.navigate(['/maze']);
+      this.router.navigate(['/intro']);
     } else {
       alert('Please select a class and enter your name.');
     }

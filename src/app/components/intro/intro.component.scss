@@ -1,0 +1,48 @@
+.intro {
+    text-align: center;
+    padding: 2rem;
+    animation: fadeIn 1s ease-in-out;
+    background: #0e0e0e;
+    color: #e0e0e0;
+    border: 2px solid #555;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 4rem auto;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        margin: 0.5rem 0;
+    }
+
+    button {
+        margin-top: 1.5rem;
+        padding: 0.5rem 1rem;
+        font-size: 1.2rem;
+        background: #0ff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+            background: #0cc;
+        }
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

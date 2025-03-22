@@ -2,16 +2,17 @@
 <div class="hud-container">
 
     <!-- Character Info -->
-<div class="player-info">
-    <h2>{{ player?.name }}</h2>
+<div class="player-info" *ngIf="player">
+    <h2>{{ player.name }}</h2>
     <div class="health-bar">
-        <div class="health-fill" [style.width.%]="player?.life ? player?.life * 5 : 0"></div>
+        <div class="health-fill" [style.width.%]="player.life * 5"></div>
     </div>
     <div class="stats">
-        <span>DEX: {{ player?.dexterity }}</span>
-        <span>STR: {{ player?.strength }}</span>
+        <span>DEX: {{ player.dexterity }}</span>
+        <span>STR: {{ player.strength }}</span>
     </div>
 </div>
+
 
     <!-- Inventory -->
     <div class="inventory">

@@ -1,0 +1,7 @@
+<div *ngIf="player" class="intro">
+    <h1>{{ player.name }} the {{ player.type }}</h1>
+    <p>You are a {{ player.gender.toLowerCase() }} {{ player.type }} with {{ player.life }} life, {{ player.dexterity }}
+        dexterity, and {{ player.strength }} strength.</p>
+    <p>Your journey begins now...</p>
+    <button (click)="continue()">Continue</button>
+</div>
